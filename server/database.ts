@@ -1,6 +1,6 @@
 
 import * as _ from 'lodash';
-import {LESSONS} from "./database-data";
+import { LESSONS } from './database-data';
 
 
 class InMemoryDatabase {
