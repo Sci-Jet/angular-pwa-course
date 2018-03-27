@@ -10,14 +10,20 @@ import { SwPush, SwUpdate } from '@angular/service-worker';
 export class AppComponent implements OnInit {
 
 
-  constructor() {
+  constructor(private swUpdate: SwUpdate /*step2*/) {
 
   }
 
   ngOnInit() {
-
-
-
+    // step 2
+    // 如果使用swUpdate.checkForUpdate就是需要配合手动点击某按钮更新
+    if (this.swUpdate.isEnabled) {
+      this.swUpdate.activated.subscribe(() => {
+        if (confirm('New version available. Do you want to load new version?')) {
+          window.location.reload();
+        }
+      });
+    }
   }
 
 }
