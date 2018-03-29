@@ -1,0 +1,16 @@
+[req]
+distinguished_name = req_distinguished_name
+[req_distinguished_name]
+countryName = Country Name (2 letter code)
+countryName_default = CN
+stateOrProvinceName = State or Province Name (full name)
+stateOrProvinceName_default = Shanghai
+localityName = Locality Name (eg, city)
+localityName_default = Pudong
+organizationName = Organizational Name
+organizationName_default = Shanghai SciJet AI tech Co., Ltd
+organizationalUnitName = Organizational Unit Name (eg, section)
+organizationalUnitName_default =
+commonName = Common Name (e.g. server FQDN or YOUR name)
+commonName_default = SciJetWeb
+commonName_max = 64
