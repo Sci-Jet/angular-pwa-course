@@ -11,22 +11,9 @@ export class AppComponent implements OnInit {
 
 
   constructor(private swUpdate: SwUpdate /*step2*/) {
-    this.swUpdate.available.subscribe(evt => {
-      // an update is available, add some logic here.
-      console.log('订阅成功');
-    });
   }
 
   ngOnInit() {
-    // step 2
-    // 如果使用swUpdate.checkForUpdate就是需要配合手动点击某按钮更新
-    // if (this.swUpdate.isEnabled) {
-    //   this.swUpdate.activated.subscribe(() => {
-    //     if (confirm('New version available. Do you want to load new version?')) {
-    //       window.location.reload();
-    //     }
-    //   });
-    // }
   }
 }
 
