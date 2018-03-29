@@ -1,3 +1,4 @@
+import { UpdateService } from './services/update.service';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -22,24 +23,29 @@ import 'rxjs/add/observable/of';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        LessonsComponent
+        LessonsComponent,
+        InfoComponent
     ],
     imports: [
         BrowserModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        MatSnackBarModule,
         AppRoutingModule,
         ReactiveFormsModule,
         ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
     ],
+    entryComponents: [InfoComponent],
     providers: [
-        LessonsService
+        LessonsService,
+        UpdateService
     ],
     bootstrap: [AppComponent]
 })
